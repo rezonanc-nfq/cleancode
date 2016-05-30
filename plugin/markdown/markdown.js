@@ -29,10 +29,11 @@
 		});
 	}
 
-	var DEFAULT_SLIDE_SEPARATOR = '^\r?\n---\r?\n$',
-		DEFAULT_NOTES_SEPARATOR = 'note:',
-		DEFAULT_ELEMENT_ATTRIBUTES_SEPARATOR = '\\\.element\\\s*?(.+?)$',
-		DEFAULT_SLIDE_ATTRIBUTES_SEPARATOR = '\\\.slide:\\\s*?(\\\S.+?)$';
+  var DEFAULT_SLIDE_SEPARATOR = '^\r?\n---\r?\n$',
+	    DEFAULT_VSLIDE_SEPARATOR = '^\r?\n--\r?\n$',
+	    DEFAULT_NOTES_SEPARATOR = 'note:',
+      DEFAULT_ELEMENT_ATTRIBUTES_SEPARATOR = '\\\.element\\\s*?(.+?)$',
+      DEFAULT_SLIDE_ATTRIBUTES_SEPARATOR = '\\\.slide:\\\s*?(\\\S.+?)$';
 
 	var SCRIPT_END_PLACEHOLDER = '__SCRIPT_END__';
 
@@ -103,6 +104,7 @@
 
 		options = options || {};
 		options.separator = options.separator || DEFAULT_SLIDE_SEPARATOR;
+		options.verticalSeparator = options.verticalSeparator || DEFAULT_VSLIDE_SEPARATOR;
 		options.notesSeparator = options.notesSeparator || DEFAULT_NOTES_SEPARATOR;
 		options.attributes = options.attributes || '';
 
