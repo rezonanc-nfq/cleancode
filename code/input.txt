@@ -1,0 +1,5 @@
+book,2,10.5,C
+pencil,12,2.55,A
+milk,3,3.45,B
+pen,2,3.98,C
+item,5,2.39,B
